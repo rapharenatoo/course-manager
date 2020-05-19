@@ -6,7 +6,7 @@ import { CourseService } from './course.service';
     selector: 'app-course-list',
     templateUrl: './course-list.component.html'
 })
-export class CourseListComponent implements OnInit{
+export class CourseListComponent implements OnInit {
     
     filteredCourses: Course[] = [];
 
@@ -25,10 +25,11 @@ export class CourseListComponent implements OnInit{
     set filter(value: string){
         this._filterBy = value;
 
-        this.filteredCourses = this._courses.filter((course: Course) => course.name.toLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+        this.filteredCourses = this._courses.filter((course: Course) => course.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
     }
 
     get filter(){
         return this._filterBy;
     }
+
 }
