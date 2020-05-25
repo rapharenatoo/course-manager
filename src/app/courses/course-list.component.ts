@@ -3,7 +3,6 @@ import { Course } from './course';
 import { CourseService } from './course.service';
 
 @Component({
-    //selector: 'app-course-list',
     templateUrl: './course-list.component.html'
 })
 export class CourseListComponent implements OnInit {
@@ -22,7 +21,7 @@ export class CourseListComponent implements OnInit {
     }
 
     /**
-     * Conferir 'filteredCourses', a funcionalidade não está funcionando
+     * Conferir 'filteredCourses', não está funcionando
      */
     set filter(value: string){
         this._filterBy = value;
